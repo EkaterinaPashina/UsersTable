@@ -36,16 +36,21 @@ function Table() {
         },
     ]);
 
-    useEffect(() => {
-        fetch('https://dummyjson.com/users')
-            .then(res => res.json())
-            .then(res => res.users)
-            .then(rowData => setRowData(rowData))
-    }, []);
-
     const defaultColDef = {
         sortable: true, flex: 1, filter: true, resizable: true, minWidth: 50 //Комфортнее для чтения было бы 150px
     };
+
+    try {
+        useEffect(() => {
+            fetch('https://dummyjson.com/users')
+                .then(res => res.json())
+                .then(res => res.users)
+                .then(rowData => setRowData(rowData))
+        }, []);
+
+    } catch (err) {
+        console.log(err);
+    }
 
     return (
         <div className="ag-theme-alpine ag-style">
