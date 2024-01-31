@@ -1,0 +1,10 @@
+.ag-style {
+    height: 95vh;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.custom-font {
+    font-family: 'Anonymous Pro', monospace;
+}
