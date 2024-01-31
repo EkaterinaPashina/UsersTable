@@ -19,11 +19,13 @@ function Table() {
         },
         {
             headerName: 'Age',
-            field: 'age'
+            field: 'age',
+            flex: 0.5
         },
         {
             headerName: 'Gender',
-            field: 'gender'
+            field: 'gender',
+            flex: 0.5
         },
         {
             headerName: 'Phone',
@@ -32,7 +34,7 @@ function Table() {
         },
         {
             headerName: 'Address',
-            field: 'address'
+            field: 'address.address'
         },
     ]);
 
